@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <SDL.h>
 #include <stdbool.h>
@@ -64,3 +64,4 @@ int main(int argc, char* argv[]) {
 	initialise();
 	return 0;
 }
+*/
