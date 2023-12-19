@@ -1,4 +1,4 @@
-/*#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <SDL.h>
 #include <stdbool.h>
@@ -58,9 +58,16 @@ void initialise() {
 	bool quit = false;
 	SDL_Event event;
 	while (!quit) {
-		while (SDL_PollEvent(&event)) {
-			if (event.type == SDL_QUIT) {
+		while (SDL_PollEvent(&event) !=0) {
+			switch (event.type) {
+			case SDL_QUIT:
 				quit = true;
+				break;
+
+			case SDL_KEYDOWN:
+				//no specific key yet
+				printf("Key pressed is %i", event.key.keysym.scancode);
+				break;
 			}
 		}
 	}
@@ -80,4 +87,3 @@ int main(int argc, char* argv[]) {
 	initialise();
 	return 0;
 }
-*/
